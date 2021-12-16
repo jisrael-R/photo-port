@@ -5,15 +5,14 @@ import About from "..";
 
 afterEach(cleanup);
 
-describe("About component", () => {
-  //renders About test
-  //First Test
+describe("About component renders", () => {
   it("renders", () => {
     render(<About />);
   });
-  // Sencond Test
+
   it("matches snapshot DOM node structure", () => {
     const { asFragment } = render(<About />);
+
     expect(asFragment()).toMatchSnapshot();
   });
 });
